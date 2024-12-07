@@ -19,6 +19,7 @@ function checkWinner() {
         const [a, b, c] = combination;
         if (board[a] && board[a] === board[b] && board[a] === board[c]) {
             setTimeout(() => alert(`${board[a]} venceu!`), 100);
+            gameStatus.innerText = `${board[a]} venceu!`;
             return true;
         }
     }
@@ -31,7 +32,6 @@ function makeMove(index) {
         board[index] = currentPlayer;
         document.getElementsByClassName("cell")[index].innerText = currentPlayer;
         if (checkWinner()) {
-            gameStatus.innerText = `${currentPlayer} venceu!`;
             return;
         }
         currentPlayer = currentPlayer === "X" ? "O" : "X"; // Alterna o jogador
