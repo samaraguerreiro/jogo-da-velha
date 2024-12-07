@@ -1,0 +1,107 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FBE1F7; /* Rosa claro de fundo */
+}
+
+/* Container principal */
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    background-color: #FFF0F6; /* Rosa suave de fundo */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+h1 {
+    font-size: 2rem;
+    color: #F09BB7; /* Rosa escuro */
+    margin-bottom: 20px;
+}
+
+/* Estilo do tabuleiro */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 20px;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #F09BB7; /* Rosa escuro nas bordas */
+    border-radius: 15px; /* Bordas arredondadas */
+    background-color: #FEE1F2; /* Rosa bem claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #F09BB7; /* Cor do texto (rosa escuro) */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #FCE4EC; /* Hover com rosa mais claro */
+}
+
+/* Estilo para o botão */
+button {
+    padding: 10px 20px;
+    background-color: #F09BB7; /* Rosa escuro */
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #FCE4EC; /* Hover com rosa claro */
+}
+
+/* Status do jogo */
+#status {
+    font-size: 1.2rem;
+    color: #F09BB7; /* Cor do texto de status */
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .board {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
+    }
+
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5rem;
+    }
+}
